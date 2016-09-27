@@ -1,0 +1,74 @@
+.contact-form{
+	max-width: 90%;
+	margin: 0 auto;
+	&__mail-label{
+		font-family: proto;
+		text-transform: uppercase;
+		font-size: 14px;
+		color: #fff;
+		display: block;
+		margin-bottom: 17px;
+	}
+	&__mail-input{
+		margin-left: 20px;
+		width: 208px;
+		padding: 10px 13px;
+		border: none;
+		border-radius: 5px;
+		&:focus{
+			outline: none;
+		}
+	}
+	&__subscribe-lable{
+		margin-left: 105px;
+		font-family: proto;
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 18px;
+		display: block;
+		position: relative;
+		margin-bottom: 25px;
+		&:before{
+			content: '';
+			display: inline-block;
+			position: absolute;
+			width: 27px;
+			height: 27px;
+			border: 2px solid #dadada;
+			border-radius: 3px;
+			box-sizing: border-box;
+			left: -35px;
+			top: -5px;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			width: 17px;
+			height: 17px;
+			left: -30px;
+			top: 0px;
+			background-image: url(../img/check.png);
+			background-size: contain;
+			display: none;
+		}
+
+	}
+	&__subscribe{
+		display: none;
+		&:checked{
+			+.contact-form__subscribe-lable:after{
+			display: inline-block;
+			}
+		}
+	}
+	&__btn{
+		font-family: proto;
+		text-transform: uppercase;
+		text-decoration: underline;		
+		background-color: transparent;
+		color: #ff5e42;
+		border: none;
+		font-size: 28px;
+		margin-left: 60px;
+	}
+}

@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma;
+  background-color: #f5f5f5;
+  background-image: url(../img/greyback.png); }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+@font-face {
+  font-family: 'proto';
+  src: url("../fonts/prototypster-medium-webfont.ttf") format("truetype"), url("../fonts/prototypster-medium-webfont.woff") format("woff"), url("../fonts/prototypstermedium-webfont.woff2") format("wof2");
+  font-weight: normal;
+  font-style: normal; }
+
+.contact-form {
+  max-width: 90%;
+  margin: 0 auto; }
+  .contact-form__mail-label {
+    font-family: proto;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    margin-bottom: 17px; }
+  .contact-form__mail-input {
+    margin-left: 20px;
+    width: 208px;
+    padding: 10px 13px;
+    border: none;
+    border-radius: 5px; }
+    .contact-form__mail-input:focus {
+      outline: none; }
+  .contact-form__subscribe-lable {
+    margin-left: 105px;
+    font-family: proto;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    position: relative;
+    margin-bottom: 25px; }
+    .contact-form__subscribe-lable:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 27px;
+      height: 27px;
+      border: 2px solid #dadada;
+      border-radius: 3px;
+      box-sizing: border-box;
+      left: -35px;
+      top: -5px; }
+    .contact-form__subscribe-lable:after {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      left: -30px;
+      top: 0px;
+      background-image: url(../img/check.png);
+      background-size: contain;
+      display: none; }
+  .contact-form__subscribe {
+    display: none; }
+    .contact-form__subscribe:checked + .contact-form__subscribe-lable:after {
+      display: inline-block; }
+  .contact-form__btn {
+    font-family: proto;
+    text-transform: uppercase;
+    text-decoration: underline;
+    background-color: transparent;
+    color: #ff5e42;
+    border: none;
+    font-size: 28px;
+    margin-left: 60px; }
+
+.page-footer {
+  width: 100%;
+  background-image: url(../img/layer.png);
+  background-size: contain;
+  background-position: 0 0;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 50px; }
+
+.page-header {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 82px;
+  margin-bottom: 40px; }
+  .page-header__logo {
+    text-align: center;
+    padding: 40px;
+    font-size: 48px;
+    background-image: url(../img/illustration.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 15px;
+    color: #2a2a2a;
+    font-family: proto;
+    text-transform: uppercase; }
+
+.product {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 140px; }
+  .product__item {
+    width: 230px;
+    height: 430px;
+    padding: 10px 10px 25px 10px;
+    box-sizing: border-box;
+    margin-right: 21px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    font-size: 13px;
+    position: relative; }
+    .product__item:hover {
+      border: 4px solid #ff5e42;
+      padding: 6px 6px 21px 6px;
+      cursor: pointer; }
+      .product__item:hover .product__item-add {
+        display: inline-block; }
+      .product__item:hover .product__item-complete {
+        display: none; }
+    .product__item:nth-child(3n) {
+      margin-right: 0%; }
+      @media (min-width: 980px) {
+        .product__item:nth-child(3n) {
+          margin-right: 21px; } }
+    @media screen and (max-width: 650px) {
+      .product__item {
+        width: 45%;
+        text-align: center; }
+        .product__item:nth-child(3n) {
+          margin-right: 21px; } }
+  .product__item--new:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-image: url(../img/flag.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 55px;
+    width: 36px; }
+  .product__item-img {
+    width: 206px;
+    display: block;
+    margin: 0 auto; }
+    .product__item-img img {
+      height: 180px; }
+  .product__item-title {
+    font-size: 24px;
+    font-family: proto;
+    text-transform: uppercase;
+    margin-bottom: 13px; }
+    @media screen and (max-width: 650px) {
+      .product__item-title {
+        text-align: center;
+        font-size: 28px; } }
+  .product__item-status {
+    margin-bottom: 23px;
+    margin-top: 0; }
+  .product__item-upload {
+    margin-bottom: 10px;
+    margin-top: 0; }
+  .product__item-attr {
+    margin-bottom: 10px;
+    margin-top: 0; }
+  .product__item-complete {
+    font-family: proto;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #cbcbcb;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end; }
+    @media screen and (max-width: 650px) {
+      .product__item-complete {
+        display: flex;
+        justify-content: center;
+        font-size: 20px; } }
+  .product__item-add {
+    text-align: center;
+    font-size: 24px;
+    font-family: proto;
+    color: #ff5e42;
+    display: none;
+    text-transform: uppercase;
+    padding-left: 4px;
+    position: relative;
+    border-bottom: 2px solid #ff5e42;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; }
+    .product__item-add:before {
+      content: '+';
+      left: -0px;
+      position: absolute; }
+  .product__btn {
+    position: absolute;
+    color: #ff5e42;
+    font-size: 36px;
+    font-family: proto;
+    text-transform: uppercase;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%); }
+
+.sort {
+  display: flex;
+  justify-content: center;
+  font-size: 14px; }
+  .sort__btn {
+    color: #ff5e42;
+    position: relative;
+    border-bottom: 1px dashed #ff5e42;
+    margin-right: 10px;
+    text-transform: lowercase; }
+    .sort__btn:last-child:after {
+      display: none; }
+    .sort__btn:after {
+      content: '';
+      position: absolute;
+      right: -5px;
+      top: 3px;
+      height: 15px;
+      width: 1px;
+      background-color: #2a2a2a; }
